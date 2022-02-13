@@ -1,4 +1,4 @@
-# HI2I
+# HI2I: Hypercomplex Image-to-Image Translation
 Official PyTorch repository for Hypercomplex Image-to-Image Transaltion
 
 Eleonora Grassucci, Luigi Sigillo, Aurelio Uncini, and Danilo Comminiello
