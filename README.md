@@ -12,3 +12,33 @@ Image-to-image translation (I2I) aims at transferring the content representation
 
 ### Model Architecture (from [StarGANv2](https://github.com/clovaai/stargan-v2))
 <img src="PHStarGANv2_arch.png">
+
+
+
+
+
+
+
+
+
+### Cite
+
+Please cite our work if you found it useful:
+
+```
+@article{grassucci2022HI2I,
+      title={Hypercomplex Image-to-Image Translation}, 
+      author={Grassucci, Eleonora and Sigillo, Luigi and Uncini, Aurelio and Comminiello, Danilo},
+      year={2022},
+      journal={Under review}
+}
+```
+
+#### Interested in Quaternion Generative Models?
+
+Check also: 
+
+* Lightweight Convolutional Neural Network by Hypercomplex Parameterization, _Under Review_, 2021 [[Paper](https://arxiv.org/pdf/2110.04176.pdf)] [[GitHub](https://github.com/elegan23/hypernets)].
+* Quaternion-Valued Variational Autoencoder, _ICASSP_, 2021 [[Paper](https://arxiv.org/pdf/2010.11647.pdf)] [[GitHub](https://github.com/eleGAN23/QVAE)].
+* An Information-Theoretic Perspective on Proper Quaternion Variational Autoencoders, _Entropy_, 2021 [[Paper](https://www.mdpi.com/1099-4300/23/7/856)] [[GitHub](https://github.com/eleGAN23/QVAE)].
+* Quaternion Generative Adversarial Networks, _Generative Adversarial Learning: Architectures and Applications, editors: Dr Roozbeh Razavi-Far, Dr Ariel Ruiz-Garcia, Professor Vasile Palade, Professor Jürgen Schmidhuber, Springer_, Jan 2022. [[Paper](https://arxiv.org/pdf/2104.09630.pdf)][[GitHub](https://github.com/eleGAN23/QGAN)].
