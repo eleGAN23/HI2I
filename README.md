@@ -34,7 +34,7 @@ Please cite our work if you found it useful:
 }
 ```
 
-#### Interested in Quaternion Generative Models?
+#### Interested in Quaternion and Hypercomplex Generative Models?
 
 Check also: 
 
