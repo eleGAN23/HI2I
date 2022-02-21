@@ -10,7 +10,7 @@ Image-to-image translation (I2I) aims at transferring the content representation
 ### Model Architecture (from [StarGANv2](https://github.com/clovaai/stargan-v2)) :clapper:
 <img src="PHStarGANv2_arch.png">
 
-### Results
+### Results :bar_chart:
 
 | Model                | Params | Storage Mem | Savings            |  FID Reference    | LPIPS Reference  |  FID Latent       | LPIPS Latent     |
 |----------------------|:------:|:-----------:|:------------------:|:-----------------:|:----------------:|:-----------------:|:----------------:|
@@ -34,8 +34,9 @@ We upload a sample `config.json`, to run different experiments please edit this 
 * `N` is the hyperparameter for parameterized hypercomplex layers, we test `N=2,3,4`. 
 * `seed=777` is to reproduce our experiments.
 
-Then, run `python main.py`. The experiment will be directly tracked on [Weight&Biases](https://wandb.ai/).
+Then, run `python main.py`. The experiment will be directly tracked on [Weight&Biases](https://wandb.ai/) (we strongly suggest to use W&B!).
 
+Experiments require approximately 80 hours on a single NVIDIA Tesla V100-32GB GPU. For a fast training one can edit the code involving `torch.nn.parallel.DistributedDataParallel` employing more than one GPU.
 
 ### Cite
 
