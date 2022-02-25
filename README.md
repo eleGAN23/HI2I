@@ -14,9 +14,9 @@ Image-to-image translation (I2I) aims at transferring the content representation
 
 | Model                | Params | Storage Mem | Savings            |  FID Reference    | LPIPS Reference  |  FID Latent       | LPIPS Latent     | Checkpoint |
 |----------------------|:------:|:-----------:|:------------------:|:-----------------:|:----------------:|:-----------------:|:----------------:|:----------:|
-| StarGANv2            |   87M  |    307MB    |         0\%        |   **21.24**       |       0.24       |       17.16       |       0.25       | [Link]() |
-| Quaternion StarGANv2 |   22M  |     76MB    |    **75\%**        | 23.09             |       0.22       |       27.90       |       0.12       | [Link]() |
-| PHStarGANv2 n=3      |   29M  |    137MB    |        67\%        |       28.11       |   **0.29**       | 16.63             |   **0.33**       | [Link]() |
+| StarGANv2            |   87M  |    307MB    |         0\%        |   **21.24**       |       0.24       |       17.16       |       0.25       | [Link](https://drive.google.com/file/d/1yZuj86S9YV_JVYfUZKgCSCVuW3hPxsSJ/view?usp=sharing) |
+| Quaternion StarGANv2 |   22M  |     76MB    |    **75\%**        | 23.09             |       0.22       |       27.90       |       0.12       | [Link](https://drive.google.com/file/d/1AUW7mN1T7omP6Bdt1rLFEXpED4tRjpPj/view?usp=sharing) |
+| PHStarGANv2 n=3      |   29M  |    137MB    |        67\%        |       28.11       |   **0.29**       | 16.63             |   **0.33**       | [Link](https://drive.google.com/file/d/1qPuNW8gBVY_OneOYwsMgOgIqJNxJlW9g/view?usp=sharing) |
 | PHStarGANv2 n=4      |   22M  |     76MB    |    **75\%**        |       24.33       |        0.27      |   **16.54**       |             0.29 | [Link](https://drive.google.com/file/d/1FeBziPo-H_B2qcBB7sndDO6qJ2RiV3Ow/view?usp=sharing) |
 
 ### How to run experiments :computer:
