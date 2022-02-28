@@ -187,3 +187,4 @@ cython_debug/
 # Ignore all local history of files
 .history
 .ionide
+expr/checkpoints/wing.ckpt
