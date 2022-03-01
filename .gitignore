@@ -188,3 +188,6 @@ cython_debug/
 .history
 .ionide
 expr/checkpoints/wing.ckpt
+expr/checkpoints/phm_3dense_100000_nets_ema.ckpt
+expr/checkpoints/phm_3dense_100000_nets.ckpt
+expr/checkpoints/phm_3dense_100000_optims.ckpt

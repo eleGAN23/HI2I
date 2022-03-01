@@ -43,12 +43,12 @@ class Solver(nn.Module):
                     weight_decay=args.weight_decay)
 
             self.ckptios = [
-                CheckpointIO(ospj(args.checkpoint_dir, args.experiment_name+'_{:06d}_nets.ckpt'), data_parallel=True, **self.nets),
-                CheckpointIO(ospj(args.checkpoint_dir, args.experiment_name+'_{:06d}_nets_ema.ckpt'), data_parallel=True, **self.nets_ema),
-                CheckpointIO(ospj(args.checkpoint_dir, args.experiment_name+'_{:06d}_optims.ckpt'), **self.optims)
+                CheckpointIO(ospj(args.checkpoint_dir, args.experiment_name+'_{:06d}_nets.ckpt'), data_parallel=True, device=self.device,**self.nets),
+                CheckpointIO(ospj(args.checkpoint_dir, args.experiment_name+'_{:06d}_nets_ema.ckpt'), data_parallel=True,device=self.device, **self.nets_ema),
+                CheckpointIO(ospj(args.checkpoint_dir, args.experiment_name+'_{:06d}_optims.ckpt'), device=self.device,**self.optims)
         ]
         else:
-            self.ckptios = [CheckpointIO(ospj(args.checkpoint_dir, '{:06d}_nets_ema.ckpt'), data_parallel=True, **self.nets_ema)]
+            self.ckptios = [CheckpointIO(ospj(args.checkpoint_dir, args.experiment_name+'_{:06d}_nets_ema.ckpt'), data_parallel=True, device=self.device,**self.nets_ema)]
 
         self.to(self.device)
         for name, network in self.named_children():
@@ -191,13 +191,13 @@ class Solver(nn.Module):
     def sample(self, loaders):
         args = self.args
         nets_ema = self.nets_ema
+        self._load_checkpoint(args.resume_iter)
         fetcher_src = InputFetcher(loaders.src, None, args.latent_dim, 'test')
         fetcher_ref = InputFetcher(loaders.ref, None, args.latent_dim, 'test')
         for i in range(3):
             #if swithced bad news
             src = next(fetcher_src)
             ref = next(fetcher_ref)
-
             fname = ospj(args.result_dir, '{}_reference.jpg'.format(str(i)))
             print('Working on {}...'.format(fname))
             utils.translate_using_reference(nets_ema, args, src.x, ref.x, ref.y, fname)

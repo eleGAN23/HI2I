@@ -928,7 +928,7 @@ class Discriminator(nn.Module):
             while num_domains %3!=0:
                 num_domains+=1
         else:
-            while num_domains %8!=0:
+            while num_domains %args.disc_dense!=0:
                 num_domains+=1
         if args.qsngan_layers:
             blocks += [QuaternionConv(dim_out, num_domains, kernel_size=1, stride=1, padding=0)]

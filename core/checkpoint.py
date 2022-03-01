@@ -2,12 +2,12 @@ import os
 import torch
 
 class CheckpointIO(object):
-    def __init__(self, fname_template, data_parallel=False, **kwargs):
+    def __init__(self, fname_template, data_parallel=False, device='cpu',**kwargs):
         os.makedirs(os.path.dirname(fname_template), exist_ok=True)
         self.fname_template = fname_template
         self.module_dict = kwargs
         self.data_parallel = data_parallel
-
+        self.device  = device
     def register(self, **kwargs):
         self.module_dict.update(kwargs)
 
@@ -27,7 +27,7 @@ class CheckpointIO(object):
         fname = self.fname_template.format(step)
         assert os.path.exists(fname), fname + ' does not exist!'
         print('Loading checkpoint from %s...' % fname)
-        module_dict = torch.load(fname,map_location=device)
+        module_dict = torch.load(fname,map_location=self.device)
             
         for name, module in self.module_dict.items():
             if self.data_parallel:
