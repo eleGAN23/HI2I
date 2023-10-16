@@ -2,7 +2,7 @@
 
 Eleonora Grassucci, Luigi Sigillo, Aurelio Uncini, and Danilo Comminiello
 
-The official repository is: ispamm/HI2I.
+The official repository is: [ispamm/HI2I](https://github.com/ispamm/HI2I).
 
 ### Abstract :bookmark_tabs:
 
